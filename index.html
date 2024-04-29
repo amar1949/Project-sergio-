@@ -1,23 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sergio & Rosa's Anniversary</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<title>Happy Anniversary!</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,400;1,300&display=swap');
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('https://github.com/amar1949/Project-sergio-/blob/main/DSCF0191.jpg?raw=true');
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .scene {
+    width: 350px;
+    height: 250px;
+    perspective: 600px;
+  }
+  .card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  }
+  .card.is-flipped {
+    transform: rotateY(180deg);
+  }
+  .card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .card-front {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .card-back {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: rotateY(180deg);
+  }
+  .text {
+    font-family: 'Lobster', cursive;
+    font-size: 22px;
+    color: #d63384;
+    text-align: center;
+  }
+</style>
 </head>
 <body>
-    <div class="card">
-        <div class="hearts"></div>
-        <h1>Happy Anniversary, Sergio & Rosa!</h1>
-        <div class="gallery">
-            <img src="https://github.com/amar1949/Project-sergio-/blob/main/72203869627__31E3E790-275C-430D-BA3C-158F8C565E7B.jpg?raw=true" alt="Image 1">
-            <img src="https://github.com/amar1949/Project-sergio-/blob/main/IMG_1566.jpg?raw=true" alt="Image 2">
-            <img src="https://github.com/amar1949/Project-sergio-/blob/main/IMG_9405.jpg?raw=true" alt="Image 3">
-        </div>
-        <p class="message">Here's to the beautiful moments we've shared and the many more to come!</p>
-        <a href="https://special-link.com" class="link" target="_blank">Click here for a sweet surprise!</a>
+<div class="scene">
+  <div class="card">
+    <div class="card-face card-front">
+      <div class="text">Happy Anniversary My Love!</div>
+      <img src="https://github.com/amar1949/Project-sergio-/blob/main/IMG_9405.jpg?raw=true" alt="Heart Image" style="width: 80px; height: 80px; margin-top: 10px;">
+      <div class="text" style="font-size: 18px;">And there is a city in my heart where you are its only population. ❤️</div>
     </div>
-    <script src="script.js"></script>
+    <div class="card-face card-back">
+      <div class="text" style="font-size: 20px;">"You and the moon are similar: you're both bright, beautiful, yet far away from me." 💖</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const card = document.querySelector('.card');
+  card.addEventListener('click', function () {
+    card.classList.toggle('is-flipped');
+  });
+</script>
 </body>
 </html>
