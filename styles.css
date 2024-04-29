@@ -1,0 +1,72 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fde4cf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    background-image: url('https://example.com/background-hearts.jpg'); /* Replace with a romantic background image URL */
+    background-size: cover;
+    background-position: center;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 320px;
+    border: 2px solid #ff6f61; /* Soft pink border */
+}
+
+.card .hearts {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 90px;
+    background: url('https://example.com/hearts-decor.png') no-repeat center; /* Replace with an actual URL */
+    background-size: contain;
+}
+
+.card h1 {
+    color: #ff6f61;
+    background: rgba(255, 255, 255, 0.9);
+    display: inline-block;
+    margin: 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.gallery img {
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.message {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #ff6f61;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+.link:hover {
+    background-color: #e55550;
+}
